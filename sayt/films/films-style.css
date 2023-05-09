@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    background: rgb(25, 2, 46);
+}
+.toggle {
+    display: none;
+}
+.menu400 {
+    display: none;
+}
+nav {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+}
+.menu {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+.menu li a {
+    text-decoration: none;
+    color: grey;
+    transition: color .6s;
+    transition: .5s;
+}
+.menu li a:hover {
+    color: white;
+}
+.menu li a.logo {
+    font-size: 40px;
+    transition: .5s;
+    color: rgb(185, 31, 31);
+}
+#logo {
+    transform: skew(10deg) rotate(2deg);
+    transition: .5s;
+}
+#logo:hover {
+    transform: scale(1.2, 1.1);
+}
+.menu li a.logo:hover {
+    text-shadow: 0 0 1px red,0 0 2px red,0 0 1px red;
+}
+.switcher {
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: white solid 1px;
+    border-radius: 18px;
+    transition: .5s;
+}
+.switcher-legend {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.switcher-radio {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    transition: filter 0.1s ease-in;
+    cursor: pointer;
+}
+.switcher-radio:focus {
+    outline: none;
+}
+.switcher-radio-light {
+    background-image: url('/STReamFlix/img/icons/light.png');
+    transition: .5s;
+}
+.switcher-radio-dark {
+    background-image: url('/STReamFlix/img/icons/darklight.png');
+    transition: .5s;
+}
+.video {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+video {
+    padding: 0px;
+    width: 480px;
+    height: 300px;
+}
+.text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: -500px;
+    color: white;
+    transition: .5s;
+}
+.text img {
+    width: 200px;
+    height: 300px;
+}
+h2 {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    h2 {
+        padding-left: 50px;
+    }
+    .catalog_film {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .film {
+        display: inline-block;
+        text-align: center;
+        margin: 5px;
+    }
+    .catalog_film img {
+       width: 150px;
+    }
+    .toggle {
+        -webkit-appearance: none;
+        appearance: none;
+        display: block;
+        color: black;
+        position: fixed;
+        z-index: 5;
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .nav1 {
+        display: none;
+    }
+    .menu400 {
+        position: absolute;
+        position: fixed;
+        z-index: 5;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 200px;
+        height: 100%;
+        transition: .5s;
+    }
+    .menu400 li {
+        margin-top: 40px;
+        padding-left: 70px;
+    }
+    .menu400 li a {
+        list-style-type: none;
+        text-decoration: none;
+        color: white;
+    }
+    .menu400 li a.logo400 {
+        color: rgb(236, 16, 16);
+    }
+    #logo400 {
+        transform: scale(1.8, 1.7) skew(5deg) rotate(2deg);
+        padding-left: 60px;
+    }
+    .video {
+        margin-top: 0px;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    video {
+        width: 380px;
+        height: 200px;
+    }
+    .text {
+        flex-direction: column-reverse;
+        margin-left: 0;
+    }
+    .text h2 {
+        margin-left: -50px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+    .text img {
+        width: 170px;
+        height: 260px;
+        margin-bottom: 20px;
+    }
+}
